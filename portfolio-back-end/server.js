@@ -3,15 +3,15 @@
 /**
  * Module dependencies.
  */
-var mongoose = require('./config/config.js'); // Import Mongoose for MongoDB
+var mongoose = require('mongoose'); // Import Mongoose for MongoDB
 var express = require('express'); // Import Express framework
-var debug = require('debug')('projectName:server'); // Placeholder for your project's name
+var debug = require('debug')('portfolio:server'); // Debug instance for project
 var http = require('http'); // Import HTTP module
 
 /**
  * Connect to MongoDB.
  */
-mongoose.connect('mongodb://localhost:27017/databaseName', { // Replace 'databaseName' with your actual database name
+mongoose.connect('mongodb+srv://username:password@midterm.fuok2.mongodb.net/portfolio?retryWrites=true&w=majority&appName=Midterm', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
@@ -94,6 +94,6 @@ function onListening() {
   var bind = typeof addr === 'string'
     ? 'pipe ' + addr
     : 'port ' + addr.port;
-  debug('Listening on ' + bind); // Placeholder for your project's name in debug instance
+  debug('Listening on ' + bind); // Debug instance for project
   console.log('==== The app is running on http://localhost:' + port );
 }
