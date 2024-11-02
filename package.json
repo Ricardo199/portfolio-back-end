@@ -1,0 +1,20 @@
+{
+  "name": "portfolio-back-end",
+  "version": "1.0.0",
+  "description": "back end for my portfolio app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Ricardo Burgos",
+  "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ricardo199/portfolio-back-end.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Ricardo199/portfolio-back-end/issues"
+  },
+  "homepage": "https://github.com/Ricardo199/portfolio-back-end#readme"
+}
