@@ -18,7 +18,7 @@ mongoose.connect('mongodb://localhost:27017/databaseName', { // Replace 'databas
 
 mongoose.connection.on('error', console.error.bind(console, 'MongoDB connection error:'));
 mongoose.connection.once('open', () => {
-  console.log('Connected to MongoDB');
+  console.log('Welcome to Portfolio Backend API');
 });
 
 /**
