@@ -3,15 +3,24 @@
 /**
  * Module dependencies.
  */
+require('dotenv').config(); // Load environment variables from .env file
 var mongoose = require('mongoose'); // Import Mongoose for MongoDB
 var express = require('express'); // Import Express framework
 var debug = require('debug')('portfolio:server'); // Debug instance for project
 var http = require('http'); // Import HTTP module
 
 /**
+ * Get password from environment variables.
+ */
+const password = process.env.DB_PASSWORD;
+const username = 'ricardo1529';
+const cluster = 'midterm.fuok2.mongodb.net';
+const dbName = 'portfolio';
+
+/**
  * Connect to MongoDB.
  */
-mongoose.connect('mongodb+srv://username:password@midterm.fuok2.mongodb.net/portfolio?retryWrites=true&w=majority&appName=Midterm', {
+mongoose.connect(`mongodb+srv://${username}:${password}@${cluster}/${dbName}?retryWrites=true&w=majority&appName=Midterm`, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
