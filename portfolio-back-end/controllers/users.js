@@ -49,6 +49,13 @@ module.exports.update = async function (req, res, next) {
         let uID = req.params.id;  // Ensure this matches the route parameter
         let updateData = req.body;
 
+        /**
+         * Updates a user document in the database with the specified update data.
+         *
+         * @param {Object} filter - The filter used to find the user document to update.
+         * @param {Object} updateData - The data to update the user document with.
+         * @returns {Promise<Object>} The result of the update operation.
+         */
         let result = await usersModel.updateOne({ _id: uID }, updateData);
         
         if (result.matchedCount > 0 && result.modifiedCount > 0) {

@@ -1,5 +1,10 @@
 const express = require('express');
 const router = express.Router();
+/**
+ * Module dependencies.
+ * @module contactsController
+ * @requires ../controllers/contacts
+ */
 const contactsController = require('../controllers/contacts');
 
 /* GET contacts listing. */
