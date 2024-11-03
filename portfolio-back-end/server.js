@@ -90,5 +90,5 @@ function onListening() {
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
 
-  console.log('==== The app is running on http://localhost:' + port );
+  console.log('==== Welcome to Portfolio Backend API' );
 }
