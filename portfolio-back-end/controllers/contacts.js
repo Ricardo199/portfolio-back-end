@@ -19,6 +19,7 @@ module.exports.create = async function (req, res, next) {
 
 module.exports.list = async function (req, res, next) {
     try {
+        console.log('Fetching contacts from database');
         let contacts = await contactModel.find();
         res.json(contacts);
     } catch (error) {
