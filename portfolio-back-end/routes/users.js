@@ -8,11 +8,10 @@ router.get('/', function(req, res, next) {
     res.send('respond with a resource');
 });
 
-router.get('/api/users', usersController.list);
-router.post('/api/users', usersController.create);
-router.get('/api/users/:id', usersController.userGet);
-router.put('/api/users/:id', usersController.update);
-router.delete('/api/users/:id', usersController.delete);
-router.param('id', usersController.userByID);
+router.get('/', usersController.list);
+router.post('/', usersController.create);
+router.get('/:id', usersController.userGet);
+router.put('/:id', usersController.update);
+router.delete('/:id', usersController.delete);
 
 module.exports = router;
