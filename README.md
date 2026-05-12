@@ -80,7 +80,7 @@ npm install
 Create the file:
 
 ```text
-/home/runner/work/portfolio-back-end/portfolio-back-end/config/secrets.env
+./config/secrets.env
 ```
 
 Add:
